@@ -5,4 +5,4 @@ VALUES ("Black and Blue", true);
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Breakfast Burger", true);
 INSERT INTO burgers (burger_name, devoured)
-VALUES ("Homestyle Cheese Burger", true);
+VALUES ("Homestyle Cheese Burger", false);

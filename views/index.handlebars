@@ -1,0 +1,62 @@
+<div class="jumbotron jumbotron-fluid bun">
+  <div class="container">
+    <center>
+      <img src="/assets/img/burger.png" alt="burger" style="width:128px;height:128px;" />
+      <h1 class="display-4">Eat-Da-Burger!</h1>
+      <p class="lead">Eat a burger from the list, or add a new favorite!</p>
+    </center>
+  </div>
+</div>
+<div class="row meat">
+  <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <h3 class="submitFont">Choose a Burger to Eat!</h3>
+      <div>
+        {{#each burgers}}
+          {{#unless devoured}}
+            <form action="burgers/eaten/{{id}}" method="POST">
+              <div class="input-group">
+                <li class="form-control">{{id}}: {{burger_name}}</li>
+                  <span class="input-group-btn">
+                    <button class="btn btn-danger devour-btn" type="submit">Eat me!</button>
+                  </span>
+              </div>
+            </form>
+          {{/unless}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3 class="submitFont">Burgers Gulped Down:</h3>
+      <div>
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class="input-group">
+              <li class="form-control">{{this.id}}: {{this.burger_name}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  <div class="col-md-2"></div>
+</div>
+<center>
+  <h2>Add A New Burger</h2>
+</center>
+<form action="/burgers/create" method="POST">
+  <div class="row">
+    <div class="col-md-4"></div>
+      <div class="form-group col-md-4">
+        <center>
+          <label for="/burgers/create" class="submitFont">Burger Name:</label>
+        </center>
+        <textarea class="form-control" type="text" columns="6" rows="2" id="burgers/create" name="burger_name"></textarea>
+      </div>
+      <div class="col-md-4"></div>
+  </div>
+  <div>
+    <center>
+      <button type="submit" class="btn btn-success">Add A New Favorite!</button>
+    </center>
+  </div>
+</form>
