@@ -15,6 +15,7 @@
 
 ## Project URL
   https://github.com/Brendon-Ravn/Eat-Da-Burger
+  <br />
   https://infinite-falls-53972.herokuapp.com/
   <br />
 
@@ -32,7 +33,7 @@
 
 ## Usage
   Add your burger with the "Add A New Favorite!" button then you can move it to the eaten list with the "Eat me!" button.
-  ![image](assets/img/BurgerApp.png)
+  ![image](./public/assets/img/BurgerApp.png)
   <br />
 
 ## Questions
