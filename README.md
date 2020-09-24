@@ -32,7 +32,7 @@
 
 ## Usage
   Add your burger with the "Add A New Favorite!" button then you can move it to the eaten list with the "Eat me!" button.
-  ![image](assets/img/BurgerApp.png)
+  ![image](../assets/img/BurgerApp.png)
   <br />
 
 ## Questions
