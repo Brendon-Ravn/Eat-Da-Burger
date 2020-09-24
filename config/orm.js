@@ -3,7 +3,7 @@ var connection = require("./connection.js");
 var orm = {
   selectAll: function(cb) {
     connection.query("SELECT * FROM burgers", function(err, res) {
-      if (err) {console.log(err)};
+      if (err) throw err;
       cb(res);
     });
   },
@@ -14,7 +14,7 @@ var orm = {
       devoured: false
     }, 
     function(err,res){
-      if (err) {console.log(err)};
+      if (err) throw err;
       cb(res);
     });
   },
@@ -22,7 +22,7 @@ var orm = {
   updateOne: function(newID, cb) {
     connection.query("UPDATE burgers SET ? WHERE ?", [{devoured: true}, {id: newID}],
      function(err, res) {
-      if (err) {console.log(err)};
+      if (err) throw err;
       cb(res);
     });
   }
