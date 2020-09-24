@@ -14,7 +14,7 @@ var orm = {
       devoured: false
     }, 
     function(err,res){
-      if (err) throw err;
+      if (err) {console.log(err)};
       cb(res);
     });
   },
@@ -22,7 +22,7 @@ var orm = {
   updateOne: function(newID, cb) {
     connection.query("UPDATE burgers SET ? WHERE ?", [{devoured: true}, {id: newID}],
      function(err, res) {
-      if (err) throw err;
+      if (err) {console.log(err)};
       cb(res);
     });
   }
